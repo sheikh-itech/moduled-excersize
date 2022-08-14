@@ -1,0 +1,24 @@
+HttpClient Configuration
+------------------------
+
+HttpClientConfig class, we are configuring mainly two things
+
+1. PoolingHttpClientConnectionManager
+
+=>It connect to pool manager
+=>Connections are pooled on a per route basis
+=>A request for a route which already the manager has persistent connections
+for available in the pool will be services by leasing a connection from the pool 
+rather than creating a brand new connection
+
+=>ConnectionKeepAliveStrategy helps in setting time which decide how long
+  A connection can remain idle before being reused
+  And set a idleConnectionMonitor thread, which periodically check all connections
+  And free up which have not been used and idle time has elapsed
+
+
+
+
+
+
+
