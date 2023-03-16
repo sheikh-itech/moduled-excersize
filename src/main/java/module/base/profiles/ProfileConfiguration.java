@@ -5,12 +5,12 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration(proxyBeanMethods = false)
 @Profile("dev")
-public class DevConfiguration {
+public class ProfileConfiguration {
 
 	private long input;
 	private String user;
 	
-	public DevConfiguration() {
+	public ProfileConfiguration() {
 		
 	}
 

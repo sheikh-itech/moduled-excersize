@@ -13,11 +13,11 @@ import org.springframework.context.annotation.Bean;
  *  is already contained in the ApplicationContext
  */
 
-@AutoConfiguration
+//@AutoConfiguration
 public class BeanAutoConfiguration {
 
 	@Bean
-	@ConditionalOnMissingBean
+	@ConditionalOnMissingBean({SomeService.class})
 	public SomeService someService() {
 		return new SomeService();
 	}

@@ -3,6 +3,7 @@ package module.base.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import module.base.config.ReferenceProperties;
@@ -21,7 +22,7 @@ public class InjectionController {
 	@Autowired
 	private ReferenceProperties config;
 	
-	@RequestMapping("/constructor")
+	@RequestMapping(value="/constructor", method=RequestMethod.GET)
 	void constructorInjection() {
 		  service.isInjected();
 		  for(String a:args.getSourceArgs())
